@@ -1,13 +1,5 @@
-import DashboardSidebar from "@/components/dashboard/sidebar/DashboardSidebar"
-
 const DashboardHomePage = () => {
-    return (
-        <>
-            <DashboardSidebar></DashboardSidebar>
-        </>
-    )
-}
+  return <div className="w-full h-screen bg-slate-400 px-4">Some Content</div>;
+};
 
-
-
-export default DashboardHomePage
+export default DashboardHomePage;
