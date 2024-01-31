@@ -18,7 +18,7 @@ const DashboardSidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <nav className="min-h-screen min-w-min">
+    <nav className="min-h-screen min-w-min text-gray-200">
       {!showSidebar && (
         <ArrowRightCircle
           className="w-12 h-12 hover:text-gray-300 transition duration-300 absolute top-0 left-0 cursor-pointer md:top-1/2 md:left-2"
@@ -47,7 +47,7 @@ const DashboardSidebar = () => {
           <div key={link.href}>
             <Link
               href={link.href}
-              className="w-full p-4 flex gap-4 justify-center items-center rounded-sm transition duration-300 hover:bg-yellow-100"
+              className="w-full p-4 flex gap-4 justify-center items-center rounded-sm transition duration-300 hover:bg-slate-300/60 hover:text-black"
             >
               {link.icon}
               {link.name}
