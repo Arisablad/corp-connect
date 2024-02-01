@@ -8,10 +8,10 @@ import { useState } from "react";
 
 const LINKS = [
   { name: "Strona Główna", href: "/home", icon: <HomeIcon /> },
-  { name: "Zarządzanie Urlopami", href: "/home", icon: <HomeIcon /> },
-  { name: "Paski Wynagrodzeń", href: "/home", icon: <HomeIcon /> },
-  { name: "Kalendarz Korporacyjny", href: "/home", icon: <HomeIcon /> },
-  { name: "Oceny Pracownicze", href: "/home", icon: <HomeIcon /> },
+  { name: "Zarządzanie Urlopami", href: "/home1", icon: <HomeIcon /> },
+  { name: "Paski Wynagrodzeń", href: "/home2", icon: <HomeIcon /> },
+  { name: "Kalendarz Korporacyjny", href: "/home3", icon: <HomeIcon /> },
+  { name: "Oceny Pracownicze", href: "/home4", icon: <HomeIcon /> },
 ];
 
 const DashboardSidebar = () => {
