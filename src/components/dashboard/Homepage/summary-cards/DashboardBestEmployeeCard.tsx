@@ -30,10 +30,10 @@ const DashboardBestEmployeeCard = () => {
             Dyscyplina: <ReviewProgressBar />
           </div>
           <div className="flex gap-2 justify-between">
-            Jakość: <ReviewProgressBar count={3} />
+            Jakość: <ReviewProgressBar count={4} />
           </div>
           <div className="flex gap-2 justify-between">
-            Wydajność: <ReviewProgressBar count={2} />
+            Wydajność: <ReviewProgressBar count={3} />
           </div>
         </div>
       </div>

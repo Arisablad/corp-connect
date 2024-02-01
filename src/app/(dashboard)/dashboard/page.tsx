@@ -4,7 +4,7 @@ import DashboardSummaryCards from "@/components/dashboard/Homepage/summary-cards
 
 const DashboardHomePage = () => {
   return (
-    <div className="w-full h-screen bg-slate-100 px-4 sm:px-12 py-12">
+    <div className="w-full min-h-screen bg-slate-100 px-4 sm:px-12 py-12">
       <SugestedLinksList />
       <DashboardSummaryCards />
       <DashboardEmployeesChart />
