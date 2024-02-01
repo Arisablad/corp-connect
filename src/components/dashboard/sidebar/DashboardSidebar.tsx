@@ -21,7 +21,7 @@ const DashboardSidebar = () => {
     <nav className="min-h-screen min-w-min text-gray-200">
       {!showSidebar && (
         <ArrowRightCircle
-          className="w-12 h-12 hover:text-gray-300 transition duration-300 absolute top-0 left-0 cursor-pointer md:top-1/2 md:left-2"
+          className="w-12 h-12 hover:text-gray-300 transition duration-300 absolute top-4 left-2 cursor-pointer md:top-1/2 md:left-2"
           onClick={() => {
             setShowSidebar(true);
           }}
