@@ -1,3 +1,4 @@
+import ReviewProgressBar from "@/components/shared/ReviewProgressBar";
 import Image from "next/image";
 
 const DashboardBestEmployeeCard = () => {
@@ -25,9 +26,15 @@ const DashboardBestEmployeeCard = () => {
           <p className="text-center sm:text-left">Dział IT</p>
         </div>
         <div className="hidden sm:block mt-2">
-          <div>Dyscyplina: *****</div>
-          <div>Jakość: *****</div>
-          <div>Wydajność: *****</div>
+          <div className="flex gap-2 justify-between">
+            Dyscyplina: <ReviewProgressBar />
+          </div>
+          <div className="flex gap-2 justify-between">
+            Jakość: <ReviewProgressBar count={3} />
+          </div>
+          <div className="flex gap-2 justify-between">
+            Wydajność: <ReviewProgressBar count={2} />
+          </div>
         </div>
       </div>
     </div>
