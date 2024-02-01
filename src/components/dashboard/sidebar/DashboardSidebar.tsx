@@ -7,11 +7,15 @@ import Link from "next/link";
 import { useState } from "react";
 
 const LINKS = [
-  { name: "Strona Główna", href: "/home", icon: <HomeIcon /> },
-  { name: "Zarządzanie Urlopami", href: "/home1", icon: <HomeIcon /> },
-  { name: "Paski Wynagrodzeń", href: "/home2", icon: <HomeIcon /> },
-  { name: "Kalendarz Korporacyjny", href: "/home3", icon: <HomeIcon /> },
-  { name: "Oceny Pracownicze", href: "/home4", icon: <HomeIcon /> },
+  { name: "Strona Główna", href: "/", icon: <HomeIcon /> },
+  {
+    name: "Zarządzanie Urlopami",
+    href: "/vacation-managment",
+    icon: <HomeIcon />,
+  },
+  { name: "Paski Wynagrodzeń", href: "home2", icon: <HomeIcon /> },
+  { name: "Kalendarz Korporacyjny", href: "home3", icon: <HomeIcon /> },
+  { name: "Oceny Pracownicze", href: "home4", icon: <HomeIcon /> },
 ];
 
 const DashboardSidebar = () => {
@@ -46,8 +50,11 @@ const DashboardSidebar = () => {
         {LINKS.map((link) => (
           <div key={link.href}>
             <Link
-              href={link.href}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}${link.href}`}
               className="w-full p-4 flex gap-4 justify-center items-center rounded-sm transition duration-300 hover:bg-slate-300/60 hover:text-black"
+              onClick={() => {
+                setShowSidebar(false);
+              }}
             >
               {link.icon}
               {link.name}
