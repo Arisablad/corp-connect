@@ -5,20 +5,20 @@ import { ArrowDown, ArrowUp } from "lucide-react";
 
 const Calendar = () => {
   const MONTH_NAMES = [
-    "Styczeń",
-    "Luty",
-    "Marzec",
-    "Kwiecień",
-    "Maj",
-    "Czerwiec",
-    "Lipiec",
-    "Sierpień",
-    "Wrzesień",
-    "Październik",
-    "Listopad",
-    "Grudzień",
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
   ];
-  const DAYS = ["Nd", "Pon", "Wt", "Śr", "Czw", "Pt", "Sob"];
+  const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   const [month, setMonth] = useState(new Date().getMonth());
   const [year, setYear] = useState(new Date().getFullYear());
@@ -133,6 +133,7 @@ const Calendar = () => {
     }
 
     if (firstDate !== null && !range) {
+      console.log(firstDate);
       console.log("First date set not on range");
     }
   }, [firstDate, secondDate]);
@@ -164,7 +165,7 @@ const Calendar = () => {
             </div>
             <div>
               {showDatepicker && (
-                <div className="bg-white mt-2 rounded-lg shadow p-8 w-full">
+                <div className="bg-white mt-2 rounded-lg shadow p-4 w-full">
                   <div className="flex items-center">
                     {titles.map((title, index) => {
                       return (
