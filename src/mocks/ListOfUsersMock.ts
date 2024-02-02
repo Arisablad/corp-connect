@@ -1,0 +1,17 @@
+export const USERS = [
+  { id: 1, name: "John Doe", email: "john.doe@example.com" },
+  { id: 2, name: "Jane Smith", email: "jane.smith@example.com" },
+  { id: 3, name: "Bob Johnson", email: "bob.johnson@example.com" },
+  { id: 4, name: "Alice Brown", email: "alice.brown@example.com" },
+  { id: 5, name: "Charlie Davis", email: "charlie.davis@example.com" },
+  { id: 6, name: "Emma White", email: "emma.white@example.com" },
+  { id: 7, name: "Frank Wilson", email: "frank.wilson@example.com" },
+  { id: 8, name: "Grace Miller", email: "grace.miller@example.com" },
+  { id: 9, name: "Henry Harris", email: "henry.harris@example.com" },
+  { id: 10, name: "Isabel Taylor", email: "isabel.taylor@example.com" },
+  { id: 11, name: "Jack Robinson", email: "jack.robinson@example.com" },
+  { id: 12, name: "Katherine Turner", email: "katherine.turner@example.com" },
+  { id: 13, name: "Leo Clark", email: "leo.clark@example.com" },
+  { id: 14, name: "Mia Scott", email: "mia.scott@example.com" },
+  { id: 15, name: "Nathan King", email: "nathan.king@example.com" },
+];
