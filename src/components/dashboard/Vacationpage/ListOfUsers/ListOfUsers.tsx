@@ -15,6 +15,7 @@ interface User {
   id: number;
   name: string;
   email: string;
+  userCode: string;
 }
 
 type TListOfUsersProps = {
@@ -24,9 +25,14 @@ type TListOfUsersProps = {
 const ListOfUsers = ({ users }: TListOfUsersProps) => {
   const [filteredUsers, setFilteredUsers] = useState(users);
 
-  const handleInputSearch = (userName: string) => {
-    const foundUsers = users.filter((user) =>
-      user.name.toLowerCase().trim().includes(userName.toLowerCase())
+  const handleInputSearch = (userInput: string) => {
+    const foundUsers = users.filter(
+      (user) =>
+        user.name.toLowerCase().trim().includes(userInput.toLowerCase()) ||
+        user.userCode
+          .toLocaleLowerCase()
+          .trim()
+          .includes(userInput.toLowerCase())
     );
     setFilteredUsers(foundUsers);
   };
@@ -46,14 +52,22 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
       <Input
         placeholder="Szukaj Użytkownika"
         onChange={(event) => handleInputSearch(event.target.value)}
+        className="mb-4"
       />
       {filteredUsers.map((user) => {
         return (
           <React.Fragment key={user.id}>
-            <Accordion type="single" collapsible>
+            <Accordion
+              type="single"
+              collapsible
+              className="hover:bg-slate-900/20 px-2 rounded-sm transition duration-300"
+            >
               <AccordionItem value="item-1">
                 <AccordionTrigger>
-                  <p>{user.name}</p>
+                  <div className="flex">
+                    <p>{user.name}</p>
+                    <p className="font-thin">{`#${user.userCode}`}</p>
+                  </div>
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col gap-2">
