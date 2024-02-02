@@ -1,3 +1,4 @@
+"use client";
 import Calendar from "@/components/shared/Calendar";
 import {
   Accordion,
@@ -7,7 +8,8 @@ import {
 } from "@/components/ui/accordion";
 import ListOfVacations from "./ListOfVacations";
 import { VACATIONS } from "./VACATION_CONST";
-import React from "react";
+import React, { useState } from "react";
+import { Input } from "@/components/ui/input";
 
 interface User {
   id: number;
@@ -20,10 +22,32 @@ type TListOfUsersProps = {
 };
 
 const ListOfUsers = ({ users }: TListOfUsersProps) => {
+  const [filteredUsers, setFilteredUsers] = useState(users);
+
+  const handleInputSearch = (userName: string) => {
+    const foundUsers = users.filter((user) =>
+      user.name.toLowerCase().trim().includes(userName.toLowerCase())
+    );
+    setFilteredUsers(foundUsers);
+  };
+
+  // AFTER CLICK AT USER NAME YOU NEED TO FETCH HIS VACATIONS EQUALS TO USER ID AND CACHE IT TO PREVENT UNECESSARY REQUESTS
+  // EXAMPLE CACHE OBJECT
+  // const cache = {
+  //   "John Soe" :   {
+  //     monthIndex: 2,
+  //     vacationTaken: 9,
+  //     days: ["6", "7", "8", "9"],
+  //   },
+  // }
+
   return (
     <div className="w-full bg-slate-200 h-full rounded-md p-4">
-      <input></input>
-      {users.map((user) => {
+      <Input
+        placeholder="Szukaj Użytkownika"
+        onChange={(event) => handleInputSearch(event.target.value)}
+      />
+      {filteredUsers.map((user) => {
         return (
           <React.Fragment key={user.id}>
             <Accordion type="single" collapsible>
