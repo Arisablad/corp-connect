@@ -32,7 +32,7 @@ const ListOfVacations = ({ Vacations }: ListOfVacationsProps) => {
 
               return (
                 <React.Fragment key={monthIndex}>
-                  <div className="border border-blue-950  p-4 min-w-52 w-full rounded-md">
+                  <div className="border border-blue-950 p-4 min-w-52 w-full rounded-md">
                     <p className="font-bold text-center text-xl">
                       {month.name}
                     </p>
@@ -41,7 +41,7 @@ const ListOfVacations = ({ Vacations }: ListOfVacationsProps) => {
                       {days.map((day, index) => (
                         <span
                           key={index}
-                          className="p-2 w-12 bg-primary rounded-sm"
+                          className="p-2 w-12 bg-orange-600 rounded-sm"
                         >
                           {day}
                         </span>

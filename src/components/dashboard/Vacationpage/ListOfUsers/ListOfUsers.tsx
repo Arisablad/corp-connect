@@ -60,7 +60,7 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
             <Accordion
               type="single"
               collapsible
-              className="px-2 rounded-sm transition duration-300"
+              className="hover:bg-accent-foreground/10 px-2 rounded-sm transition duration-300"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger>
@@ -71,19 +71,19 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="flex flex-col gap-2 text-white">
-                    <p className="p-4 bg-secondary rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Przysługujący urlop: 23
                     </p>
-                    <p className="p-4 bg-secondary rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Ilość urlopu: 21
                     </p>
-                    <p className="p-4 bg-secondary rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Urlop wykorzystany: 6
                     </p>
-                    <p className="p-4 bg-secondary rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Urlop Zaległy: 5
                     </p>
-                    <p className="p-4 bg-secondary rounded-sm">Opieka: 0</p>
+                    <p className="p-4 bg-primary rounded-sm">Opieka: 0</p>
                   </div>
 
                   {/* WYKORZYSTANE URLOPY */}
