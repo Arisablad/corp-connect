@@ -4,7 +4,7 @@ import Image from "next/image";
 const DashboardBestEmployeeCard = () => {
   return (
     <div
-      className="cursor-pointer bg-white shadow-md rounded-md w-full h-64 hover:bg-secondary/20 hover:scale-105 transition duration-700 flex flex-col items-center sm:flex-row sm:h-48
+      className="cursor-pointer bg-secondary shadow-md rounded-md w-full h-64 hover:bg-primary/20 hover:scale-105 transition duration-700 flex flex-col items-center sm:flex-row sm:h-48
      gap-4 p-4"
     >
       <p className="sm:hidden">Pracownik Miesiąca</p>

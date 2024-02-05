@@ -2,7 +2,7 @@ import RoundedProgressBar from "@/components/shared/RoundedProgressBar";
 
 const VacationSummary = () => {
   return (
-    <div className="w-full h-min bg-slate-200 rounded-md flex flex-col md:flex-row items-center p-4">
+    <div className="w-full h-min bg-secondary rounded-md flex flex-col md:flex-row items-center p-4">
       <div className="flex flex-col items-center">
         <span className="text-xl font-semibold text-center">
           Aktualna Ilość Pracowników

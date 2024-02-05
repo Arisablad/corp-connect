@@ -71,6 +71,7 @@ const RoundedProgressBar = ({
           text-anchor="middle"
           alignment-baseline="middle"
           fontWeight={"bold"}
+          fill="steelblue"
         >
           {computePercentages}%
         </text>
@@ -84,6 +85,7 @@ const RoundedProgressBar = ({
             text-anchor="middle"
             alignment-baseline="middle"
             fontWeight={"lighter"}
+            fill="steelblue"
           >
             {minValue}/{maxValue}
           </text>

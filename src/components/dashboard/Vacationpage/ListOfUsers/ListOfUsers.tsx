@@ -48,7 +48,7 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
   // }
 
   return (
-    <div className="w-full bg-slate-200 h-full rounded-md p-4">
+    <div className="w-full bg-secondary h-full rounded-md p-4">
       <Input
         placeholder="Szukaj Użytkownika"
         onChange={(event) => handleInputSearch(event.target.value)}
@@ -60,7 +60,7 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
             <Accordion
               type="single"
               collapsible
-              className="hover:bg-slate-900/20 px-2 rounded-sm transition duration-300"
+              className="hover:bg-accent-foreground/10 px-2 rounded-sm transition duration-300"
             >
               <AccordionItem value="item-1">
                 <AccordionTrigger>
@@ -70,20 +70,20 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="flex flex-col gap-2">
-                    <p className="p-4 bg-slate-300 rounded-sm">
+                  <div className="flex flex-col gap-2 text-white">
+                    <p className="p-4 bg-primary rounded-sm">
                       Przysługujący urlop: 23
                     </p>
-                    <p className="p-4 bg-slate-300 rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Ilość urlopu: 21
                     </p>
-                    <p className="p-4 bg-slate-300 rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Urlop wykorzystany: 6
                     </p>
-                    <p className="p-4 bg-slate-300 rounded-sm">
+                    <p className="p-4 bg-primary rounded-sm">
                       Urlop Zaległy: 5
                     </p>
-                    <p className="p-4 bg-slate-300 rounded-sm">Opieka: 0</p>
+                    <p className="p-4 bg-primary rounded-sm">Opieka: 0</p>
                   </div>
 
                   {/* WYKORZYSTANE URLOPY */}

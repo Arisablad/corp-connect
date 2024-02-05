@@ -1,5 +1,6 @@
 "use client";
 
+import { ModeToggle } from "@/components/themes/theme-mode-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRightCircle, HomeIcon, ShieldCloseIcon } from "lucide-react";
@@ -34,9 +35,9 @@ const DashboardSidebar = () => {
 
       <div
         className={cn(
-          "fixed z-40 flex flex-col gap-4 left-0 min-h-screen w-full duration-1000 ease-in-out -translate-x-full p-4 md:w-96",
+          "fixed z-40 flex flex-col gap-4 left-0 min-h-screen w-full duration-1000 ease-in-out -translate-x-full p-4 md:w-96 items-center",
           {
-            "bg-[#303D50] translate-x-0": showSidebar,
+            "bg-sidebar translate-x-0": showSidebar,
           }
         )}
       >
@@ -61,7 +62,7 @@ const DashboardSidebar = () => {
             </Link>
           </div>
         ))}
-
+        <ModeToggle />
         <Button>SignOut</Button>
       </div>
     </nav>
