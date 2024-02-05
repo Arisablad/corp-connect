@@ -41,7 +41,7 @@ const ListOfVacations = ({ Vacations }: ListOfVacationsProps) => {
                       {days.map((day, index) => (
                         <span
                           key={index}
-                          className="p-2 w-12 bg-orange-600 rounded-sm"
+                          className="p-2 w-12 bg-primary rounded-sm"
                         >
                           {day}
                         </span>
