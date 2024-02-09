@@ -1,13 +1,10 @@
 "use client";
-import Calendar from "@/components/shared/Calendar";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import ListOfVacations from "../ListOfVacations/ListOfVacations";
-import { VACATIONS } from "../ListOfVacations/VACATION_CONST";
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 
@@ -22,7 +19,7 @@ type TListOfUsersProps = {
   users: User[];
 };
 
-const ListOfUsers = ({ users }: TListOfUsersProps) => {
+const UsersPreview = ({ users }: TListOfUsersProps) => {
   const [filteredUsers, setFilteredUsers] = useState(users);
 
   const handleInputSearch = (userInput: string) => {
@@ -70,29 +67,7 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <div className="flex flex-col gap-2 text-white">
-                    <p className="p-4 bg-primary rounded-sm">
-                      Przysługujący urlop: 23
-                    </p>
-                    <p className="p-4 bg-primary rounded-sm">
-                      Ilość urlopu: 21
-                    </p>
-                    <p className="p-4 bg-primary rounded-sm">
-                      Urlop wykorzystany: 6
-                    </p>
-                    <p className="p-4 bg-primary rounded-sm">
-                      Urlop Zaległy: 5
-                    </p>
-                    <p className="p-4 bg-primary rounded-sm">Opieka: 0</p>
-                  </div>
-
-                  {/* WYKORZYSTANE URLOPY */}
-                  <ListOfVacations Vacations={VACATIONS} />
-
-                  <div className="flex items-center flex-col">
-                    <p className="font-bold text-2xl mt-4">Zaplanuj Urlop</p>
-                    <Calendar />
-                  </div>
+                  <div className="flex flex-col gap-2 text-white">User1</div>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
@@ -103,4 +78,4 @@ const ListOfUsers = ({ users }: TListOfUsersProps) => {
   );
 };
 
-export default ListOfUsers;
+export default UsersPreview;

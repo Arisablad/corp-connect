@@ -1,6 +1,8 @@
-import DashboardEmployeesChart from "@/components/dashboard/Homepage/employees-chart/Dashboard-Employees-Chart";
-import SugestedLinksList from "@/components/dashboard/Homepage/suggested-links/sugested-links-list";
-import DashboardSummaryCards from "@/components/dashboard/Homepage/summary-cards/DashboardSummaryCards";
+import {
+  SugestedLinksList,
+  DashboardEmployeesChart,
+  DashboardSummaryCards,
+} from "@/components/dashboard/Homepage";
 
 const DashboardHomePage = () => {
   return (

@@ -14,9 +14,9 @@ const LINKS = [
     href: "/vacation-managment",
     icon: <HomeIcon />,
   },
-  // { name: "Paski Wynagrodzeń", href: "home2", icon: <HomeIcon /> },
+  { name: "Oceny Pracownicze", href: "/job-appraisal", icon: <HomeIcon /> },
   // { name: "Kalendarz Korporacyjny", href: "home3", icon: <HomeIcon /> },
-  // { name: "Oceny Pracownicze", href: "home4", icon: <HomeIcon /> },
+  // { name: "Paski Wynagrodzeń", href: "home2", icon: <HomeIcon /> },
 ];
 
 const DashboardSidebar = () => {

@@ -1,20 +1,16 @@
-import {
-  ListOfUsers,
-  VacationSummary,
-} from "@/components/dashboard/Vacationpage";
+import UsersPreview from "@/components/dashboard/job-appraisal/users/preview/UsersPreview";
 import { USERS } from "@/mocks/ListOfUsersMock";
 
 // HERE FETCH A USERS FROM DB SERVER SIDE COMPONENT
 
-const VacationManagmentPage = () => {
+const JobAppraisalPage = () => {
   return (
     <div className="w-full min-h-screen bg-background px-4 sm:px-12 py-12">
       <div className="flex flex-col xl:flex-row gap-12">
-        <ListOfUsers users={USERS} />
-        <VacationSummary />
+        <UsersPreview users={USERS} />
       </div>
     </div>
   );
 };
 
-export default VacationManagmentPage;
+export default JobAppraisalPage;

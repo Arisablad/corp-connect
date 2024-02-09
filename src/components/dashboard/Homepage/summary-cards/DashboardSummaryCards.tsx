@@ -1,6 +1,8 @@
-import DashboardBestEmployeeCard from "./DashboardBestEmployeeCard";
-import DashboardCalendarCard from "./DashboardCalendarCard";
-import DashboardMessageCard from "./DashboardMessageCard";
+import {
+  DashboardBestEmployeeCard,
+  DashboardCalendarCard,
+  DashboardMessageCard,
+} from "..";
 
 const DashboardSummaryCards = () => {
   return (
