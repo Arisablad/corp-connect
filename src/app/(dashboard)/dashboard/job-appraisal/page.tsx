@@ -7,7 +7,7 @@ const JobAppraisalPage = () => {
   return (
     <div className="w-full min-h-screen bg-background px-4 sm:px-12 py-12">
       <div className="flex flex-col xl:flex-row gap-12">
-        <UsersPreview users={USERS} />
+        <UsersPreview users={USERS} enableRedirect />
       </div>
     </div>
   );

@@ -7,19 +7,12 @@ import {
 } from "@/components/ui/accordion";
 import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  userCode: string;
-}
-
-type TListOfUsersProps = {
-  users: User[];
-};
-
-const UsersPreview = ({ users }: TListOfUsersProps) => {
+const UsersPreview: React.FC<TListOfUsersProps> = ({
+  users,
+  enableRedirect = false,
+}) => {
   const [filteredUsers, setFilteredUsers] = useState(users);
 
   const handleInputSearch = (userInput: string) => {
@@ -57,19 +50,30 @@ const UsersPreview = ({ users }: TListOfUsersProps) => {
             <Accordion
               type="single"
               collapsible
-              className="hover:bg-accent-foreground/10 px-2 rounded-sm transition duration-300"
+              className="hover:bg-accent-foreground/10 px-2 rounded-sm transition duration-300 p-4"
             >
-              <AccordionItem value="item-1">
-                <AccordionTrigger>
-                  <div className="flex">
-                    <p>{user.name}</p>
-                    <p className="font-thin">{`#${user.userCode}`}</p>
-                  </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                  <div className="flex flex-col gap-2 text-white">User1</div>
-                </AccordionContent>
-              </AccordionItem>
+              {enableRedirect ? (
+                <Link href={`/dashboard/job-appraisal/${user.id}`}>
+                  <AccordionItem value="item-1">
+                    <div className="flex">
+                      <p>{user.name}</p>
+                      <p className="font-thin">{`#${user.userCode}`}</p>
+                    </div>
+                  </AccordionItem>
+                </Link>
+              ) : (
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>
+                    <div className="flex">
+                      <p>{user.name}</p>
+                      <p className="font-thin">{`#${user.userCode}`}</p>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="flex flex-col gap-2 text-white">User1</div>
+                  </AccordionContent>
+                </AccordionItem>
+              )}
             </Accordion>
           </React.Fragment>
         );
@@ -79,3 +83,15 @@ const UsersPreview = ({ users }: TListOfUsersProps) => {
 };
 
 export default UsersPreview;
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  userCode: string;
+}
+
+type TListOfUsersProps = {
+  users: User[];
+  enableRedirect?: boolean;
+};
